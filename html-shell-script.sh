@@ -24,9 +24,9 @@ top_html="<!DOCTYPE html>
     <tr>\""
           # directory where I unziped the website images
           # if you were to use this code, you would replace for your own directory here
-image_dir="/usr/berkeley/computing-basics-challenge/images"
+image_dir="/usr/berkeley/computing-basics-challenge/darkhttpd/images"
           # the new output file
-          # if you were to use this code you'd replace the directory and file name below
+          # if you were to use this code you'd replace the directory and file name below 
 output_file="/usr/berkeley/computing-basics-challenge/updated_index.html"
 
     # the two variables signaling the end of a row
