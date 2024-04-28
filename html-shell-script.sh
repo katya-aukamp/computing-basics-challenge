@@ -33,6 +33,20 @@ output_file="/usr/berkeley/computing-basics-challenge/updated_index.html"
 row_end="</tr>"
 row_start="<tr>"
 
+# From testing out why certain images were not loading it seems because of words with diacritic letters in them
+# decided easiest thing was to just rename everything as file followed by the count of the file
+
+i=1
+for image_file in "$image_dir"/*; do
+    # Check if the file is a regular file (not a directory)
+    if [ -f "$image_file" ]; then
+        extension="${image_file##*.}"
+        new_filename="file$i.$extension"
+        mv "$image_file" "$image_dir/$new_filename"
+        ((i++))
+    fi
+done
+
 # Loading the top html once, and it includes the <tr> for the fist row. This makes it so it ends and starts a new row ever 3
 echo " $top_html" >> "$output_file"
 
